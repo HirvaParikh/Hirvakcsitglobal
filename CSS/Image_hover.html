@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Image_Hover</title>
+        <style type="text/css">
+            .container-img{
+                position: relative;
+                width: 300px;
+            }
+            .image {
+                display: block;
+                width: 300px;
+                height: 400px;
+                transition: 1s;
+            }
+            .overlay {
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left:0;
+                right: 0;
+                height: 100%;
+                opacity: 0;
+                transition: 1s;
+                background-color:rgba(0,0,0,0.7)
+            }
+            .container-img:hover .overlay {
+                opacity: 1;
+            }
+            .container-img:hover .image {
+                transform: rotate(360deg);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Image Effect</h2>
+        <div class="container-img">
+            <img src="I1.jpeg" alt="Demo Image" class="image">
+            <div class="overlay">
+                <div class="text">HirrWahhhh</div>
+            </div>
+        </div>
+    </body>
+</html>

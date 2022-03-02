@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="demo.js" type="text/Javascript"></script>
+    <script type="text/Javascript">
+        function alertDemo() {
+            alert('Inline Alert')
+        }
+        function confirmDemo() {
+            confirm('Are You Sure??')
+        }
+        function promptDemo() {
+            var fname=prompt('Enter Name')
+            var lname=prompt('Last name')
+            alert(fname+" "+lname)
+        }
+        function changeBlue() {
+            document.getElementById("changeBGColor").style.backgroundColor = "Blue";          
+        }
+        function changeRed() {
+            document.getElementById("changeBGColor").style.backgroundColor = "Red";          
+        }
+        function changeBG() {
+           document.getElementById("changeBGColor").style.changeBGColor = document.getElementById("colorpicker").value;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Inline Alert" onclick="alert('Inline Alert')">
+    <input type="button" value="Inline Confirm" onclick="confirm('Are You Sure...?')">
+    <input type="button" value="Inline Prompt" onclick="prompt('Enter Name')">
+    <hr>
+    <input type="button" value="Internal Alert" onclick="alertDemo()">
+    <input type="button" value="Internal Confirm" onclick="confirmDemo()">
+    <input type="button" value="Internal Prompt" onclick="promptDemo()">
+    <hr>
+    <input type="button" value="External Alert" onclick="alertExtDemo()">
+    <input type="button" value="External Confirm" onclick="confirmExtDemo()">
+    <input type="button" value="External Prompt" onclick="promptExtDemo()">
+    <hr>
+    <div style="height : 200px; width: 200px; background-color: black;" id="changeBGColor"></div>
+    <input type="button" id="btnBlue" value="Blue Button" onclick="changeToBlue()">
+    <input type="button" id="btnRed" value="Red Button" onclick="changeToRed()">
+    <input type="color" id="colorpicker" onchange="changeBG()">
+</body>
+</html>

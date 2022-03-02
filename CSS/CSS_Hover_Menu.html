@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            CSS Hover
+        </title>
+        <style type="text/css">
+            
+			MainUL li ul li{display:none;}
+			#MainUL li:hover ul li{display:block;}
+			#MainUL li:hover ul li ul li{display:none;}
+			#MainUL li ul li:hover ul li{display:block;}
+			#MainUL li ul li:hover ul li ul li{display:none;}
+			#MainUL li ul li ul li:hover ul li{display:block;}
+        </style>
+    </head>
+    <body>
+        <ul id="MainUL">
+            <li>Google
+            <ul>
+                <li>Gmail
+                <ul>
+                    <li>Sign UP</li>
+                    <li>Sign In
+                    <ul>
+                        <li>As Admin</li>
+                        <li>As Member</li>
+                     </ul>
+                 </li>
+            </ul>
+         </li>
+         <li>Youtube</li>
+         <li>Drive</li>
+         </ul>
+         </li>
+         <li>Instagram</li>
+         <li>Whatsapp</li>
+    </body>
+</html>

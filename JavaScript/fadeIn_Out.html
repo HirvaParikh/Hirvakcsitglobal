@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In/Out</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#fade_Out").attr('disabled',true)
+
+            $("#fade_In").click(function(){
+                if(confirm("Are you sure...?")){
+                    $("#div1").fadeIn(1000);
+                    $("#div2").fadeIn(2000);
+                    $("#div3").fadeIn(3000);
+                    $("#fade_Out").attr('disabled',false);
+                    $(this).attr('disabled',true);
+                }
+            })
+            $("#fade_Out").click(function(){
+                if(confirm("Are you sure...?")){
+                    $("#div1").fadeOut(1000);
+                    $("#div2").fadeOut(2000);
+                    $("#div3").fadeOut(3000);
+                    $("#fade_In").attr('disabled',false);
+                    $(this).attr('disabled',true);
+                }
+            })
+            $("#btnToggle").click(function(){
+                if(confirm("Are you sure...?")){
+                    $("#div1").fadeToggle(1000);
+                    $("#div2").fadeToggle(2000);
+                    $("#div3").fadeToggle(3000);
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <button id="fade_In">Fade In</button>
+    <button id="fade_Out">Fade Out</button>
+    <button id="btnToggle">Fade In/Out</button>
+    <div style="height: 100px;width: 100px;display: none;background-color: red;" id="div1"></div>
+    <div style="height: 100px;width: 100px;display: none;background-color: green;" id="div2"></div>
+    <div style="height: 100px;width: 100px;display: none;background-color: black;" id="div3"></div>
+</body>
+</html>
